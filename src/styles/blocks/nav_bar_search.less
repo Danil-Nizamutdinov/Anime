@@ -1,0 +1,33 @@
+// main: "../main.less"
+@import "../vars.less";
+
+.search_button {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+
+  & div {
+    margin-right: 15px;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    background: @color-background-text;
+    height: 4px;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+  }
+  &:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+}

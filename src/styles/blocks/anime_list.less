@@ -1,0 +1,63 @@
+// main: "../main.less"
+@import "../vars.less";
+
+.anime {
+  margin-top: 40px;
+}
+
+.anime_katalog {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.anime_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 44px;
+  margin-top: 33px;
+
+  @media screen and (@desktop) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media screen and (@tablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (@mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.anime_list_content {
+  position: relative;
+  text-decoration: none;
+  color: @color-text;
+  transition: 0.2s;
+  &:hover {
+    opacity: 0.7;
+  }
+  .anime_list_img {
+    height: 350px;
+    width: 250px;
+    border-radius: 10px;
+  }
+  .anime_list_title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .anime_score {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 10px;
+    background: rgba(0, 209, 255, 0.7);
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+.anime_list_content_active {
+  z-index: -1;
+}

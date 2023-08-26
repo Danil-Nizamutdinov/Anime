@@ -1,0 +1,39 @@
+@import "vars";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+@import "blocks/navbar.less";
+@import "blocks/anime_list.less";
+@import "blocks/anime.less";
+@import "blocks/nav_bar_search.less";
+@import "blocks/modal_search.less";
+@import "blocks/anime_list_sort.less";
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+input {
+  box-sizing: border-box;
+}
+
+body {
+  background: @color-background;
+  color: @color-text;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+
+  @media screen and (@desktop) {
+    max-width: 940px;
+  }
+  @media screen and (@tablet) {
+    max-width: 700px;
+  }
+  @media screen and (@mobile) {
+    max-width: 280px;
+  }
+}

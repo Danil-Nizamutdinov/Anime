@@ -1,0 +1,66 @@
+// main: "../main.less"
+@import "../vars.less";
+
+.header {
+  background: @color-background-header;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.header_content {
+  width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (@desktop) {
+    max-width: 940px;
+  }
+  @media screen and (@tablet) {
+    max-width: 700px;
+  }
+  @media screen and (@mobile) {
+    max-width: 280px;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  & img {
+    width: 50px;
+  }
+
+  .nav_bar_link {
+    text-decoration: none;
+    color: @color-text;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-left: 100px;
+    @media screen and (@mobile) {
+      margin-left: 50px;
+    }
+    font-weight: 700;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      background: @color-background-text;
+      height: 4px;
+      width: 100%;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.2s ease;
+    }
+    &:hover::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

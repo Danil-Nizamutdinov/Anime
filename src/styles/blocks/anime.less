@@ -1,0 +1,75 @@
+// main: "../main.less"
+@import "../vars.less";
+
+.anime_page {
+  margin-top: 40px;
+}
+
+.anime_page_content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+
+  @media screen and (@desktop) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (@mobile) {
+    display: block;
+  }
+
+  .anime_page_img {
+    & img {
+      border-radius: 10px;
+    }
+  }
+  .anime_page_info {
+    .anime_page_title {
+      font-size: 32px;
+      font-weight: 500;
+      margin-bottom: 30px;
+
+      @media screen and (@mobile) {
+        margin-top: 30px;
+      }
+    }
+    .anime_page_info_item {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      font-size: 18px;
+      font-weight: 300;
+      margin-bottom: 25px;
+      @media screen and (@mobile) {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}
+
+.anime_page_description {
+  margin-top: 20px;
+  & p {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 300;
+  }
+}
+
+.anime_page_trailer {
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 35px;
+
+  .trailer {
+    width: 800px;
+    height: 450px;
+
+    @media screen and (@tablet) {
+      width: 700px;
+      height: 400px;
+    }
+
+    @media screen and (@mobile) {
+      width: 280px;
+      height: 170px;
+    }
+  }
+}

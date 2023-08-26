@@ -1,0 +1,408 @@
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuOKfMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuI6fMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuFuYMZg.ttf) format('truetype');
+}
+.header {
+  background: #171717;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+.header_content {
+  width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and ((max-width: 1366px)) {
+  .header_content {
+    max-width: 940px;
+  }
+}
+@media screen and ((max-width: 1024px)) {
+  .header_content {
+    max-width: 700px;
+  }
+}
+@media screen and ((max-width: 768px)) {
+  .header_content {
+    max-width: 280px;
+  }
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav img {
+  width: 50px;
+}
+.nav .nav_bar_link {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-left: 100px;
+  font-weight: 700;
+  position: relative;
+}
+@media screen and ((max-width: 768px)) {
+  .nav .nav_bar_link {
+    margin-left: 50px;
+  }
+}
+.nav .nav_bar_link::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  background: #1976d2;
+  height: 4px;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s ease;
+}
+.nav .nav_bar_link:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+.anime {
+  margin-top: 40px;
+}
+.anime_katalog {
+  font-size: 32px;
+  font-weight: 700;
+}
+.anime_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 44px;
+  margin-top: 33px;
+}
+@media screen and ((max-width: 1366px)) {
+  .anime_list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and ((max-width: 1024px)) {
+  .anime_list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and ((max-width: 768px)) {
+  .anime_list {
+    grid-template-columns: 1fr;
+  }
+}
+.anime_list_content {
+  position: relative;
+  text-decoration: none;
+  color: #f5f5f5;
+  transition: 0.2s;
+}
+.anime_list_content:hover {
+  opacity: 0.7;
+}
+.anime_list_content .anime_list_img {
+  height: 350px;
+  width: 250px;
+  border-radius: 10px;
+}
+.anime_list_content .anime_list_title {
+  font-size: 18px;
+  font-weight: 700;
+}
+.anime_list_content .anime_score {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 10px;
+  background: rgba(0, 209, 255, 0.7);
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.anime_list_content_active {
+  z-index: -1;
+}
+.anime_page {
+  margin-top: 40px;
+}
+.anime_page_content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+}
+@media screen and ((max-width: 1366px)) {
+  .anime_page_content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and ((max-width: 768px)) {
+  .anime_page_content {
+    display: block;
+  }
+}
+.anime_page_content .anime_page_img img {
+  border-radius: 10px;
+}
+.anime_page_content .anime_page_info .anime_page_title {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+@media screen and ((max-width: 768px)) {
+  .anime_page_content .anime_page_info .anime_page_title {
+    margin-top: 30px;
+  }
+}
+.anime_page_content .anime_page_info .anime_page_info_item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+@media screen and ((max-width: 768px)) {
+  .anime_page_content .anime_page_info .anime_page_info_item {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.anime_page_description {
+  margin-top: 20px;
+}
+.anime_page_description p {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 300;
+}
+.anime_page_trailer {
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+.anime_page_trailer .trailer {
+  width: 800px;
+  height: 450px;
+}
+@media screen and ((max-width: 1024px)) {
+  .anime_page_trailer .trailer {
+    width: 700px;
+    height: 400px;
+  }
+}
+@media screen and ((max-width: 768px)) {
+  .anime_page_trailer .trailer {
+    width: 280px;
+    height: 170px;
+  }
+}
+.search_button {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+}
+.search_button div {
+  margin-right: 15px;
+}
+.search_button::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  background: #1976d2;
+  height: 4px;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s ease;
+}
+.search_button:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+.modal_search {
+  z-index: 3;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.667);
+  pointer-events: all;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.1s;
+}
+.modal_search_active {
+  opacity: 1;
+  pointer-events: all;
+}
+.search_popup {
+  position: relative;
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 150px;
+  background-color: #171717;
+  border-radius: 16px;
+  transform: scale(0.5);
+  transition: 0.3s;
+}
+@media screen and ((max-width: 768px)) {
+  .search_popup {
+    width: 100%;
+    height: 100%;
+  }
+}
+.search_popup_active {
+  transform: scale(1);
+  z-index: 3;
+}
+.search {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.search .search_input {
+  padding: 10px 20px;
+  border: none;
+  width: 100%;
+  border-radius: 20px;
+  color: #fff;
+  background: #222223;
+}
+.search_result {
+  padding: 25px;
+}
+.search_result .search_result_content {
+  display: flex;
+  text-decoration: none;
+  color: #f5f5f5;
+  font-weight: 300;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  transition: 0.1s ease;
+}
+.search_result .search_result_content .search_result_img img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.search_result .search_result_content .search_result_title {
+  margin-left: 20px;
+}
+.search_result .search_result_content:hover {
+  background: #222223;
+}
+.anime_sort {
+  position: relative;
+  margin-top: 25px;
+}
+.anime_sort_button {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  background: none;
+  border: none;
+  color: #f5f5f5;
+  padding: 5px 5px;
+  transition: 0.2s ease;
+}
+.anime_sort_button img {
+  margin-left: 20px;
+}
+.anime_sort_button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+.anime_sort_content {
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 250px;
+  padding: 20px 0px;
+  background: #222223;
+  z-index: 1;
+  border-radius: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+.anime_sort_content .anime_sort_list_item {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+.anime_sort_content .anime_sort_list_item:hover {
+  background: #1976d2;
+}
+.anime_sort_content .anime_sort_list_item_active {
+  border: 1px solid #1976d2;
+}
+.anime_sort_content_active {
+  opacity: 1;
+  pointer-events: all;
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+input {
+  box-sizing: border-box;
+}
+body {
+  background: #121212;
+  color: #f5f5f5;
+  font-family: "Inter", sans-serif;
+}
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+@media screen and ((max-width: 1366px)) {
+  .container {
+    max-width: 940px;
+  }
+}
+@media screen and ((max-width: 1024px)) {
+  .container {
+    max-width: 700px;
+  }
+}
+@media screen and ((max-width: 768px)) {
+  .container {
+    max-width: 280px;
+  }
+}
